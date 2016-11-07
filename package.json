@@ -1,0 +1,19 @@
+{
+  "name": "alexa-hacker-news",
+  "version": "0.0.1",
+  "description": "Hacker News annunciator Alexa Skill using alexa-app-server and alexa-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierce Primm, Sr.",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^2.3.4",
+    "alexa-app-server": "^2.2.4",
+    "scraperjs": "^1.2.0"
+  },
+  "devDependencies": {
+    "localtunnel": "^1.8.1"
+  }
+}
