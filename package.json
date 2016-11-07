@@ -9,9 +9,7 @@
   "author": "Pierce Primm, Sr.",
   "license": "ISC",
   "dependencies": {
-    "alexa-app": "^2.3.4",
-    "alexa-app-server": "^2.2.4",
-    "scraperjs": "^1.2.0"
+    "alexa-app-server": "^2.2.4"
   },
   "devDependencies": {
     "localtunnel": "^1.8.1"
