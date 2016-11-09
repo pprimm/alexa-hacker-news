@@ -13,7 +13,7 @@ module.change_code = 0;
 var app = new alexa.app('my-hacker-news');
 
 app.launch(function(req,res) {
-  res.say('Welcome to my hacker news service.');
+  res.say('Here are the latest hacker news .');
   scraperjs.StaticScraper.create('https://news.ycombinator.com/')
     .scrape(function($) {
       return $(".title a").map(function() {
@@ -26,11 +26,18 @@ app.launch(function(req,res) {
       //console.log(latestHNews.timeStamp);
       //console.log(latestHNews.newsItems);
       //res.say('Done retrieveing results.').send();
-      res.say('<p> Number one. ' + latestHNews.newsItems[0] + '.</p>')
-      .say('<p> Number two. ' + latestHNews.newsItems[2] + '.</p>')
-      .say('<p> Number three. ' + latestHNews.newsItems[4] + '.</p>')
-      .say('<p> Number four. ' + latestHNews.newsItems[6] + '.</p>')
-      .say('<p> Number five. ' + latestHNews.newsItems[8] + '.</p>')
+      console.log();
+      console.log('Post number one. ' + latestHNews.newsItems[0]);
+      console.log('Post number two. ' + latestHNews.newsItems[2]);
+      console.log('Post number three. ' + latestHNews.newsItems[4]);
+      console.log('Post number four. ' + latestHNews.newsItems[6]);
+      console.log('Post number five. ' + latestHNews.newsItems[8]);
+
+      res.say('<p>Post number one. ' + latestHNews.newsItems[0] + '.</p>')
+      .say('<p>Post number two. ' + latestHNews.newsItems[2] + '.</p>')
+      .say('<p>Post number three. ' + latestHNews.newsItems[4] + '.</p>')
+      .say('<p>Post number four. ' + latestHNews.newsItems[6] + '.</p>')
+      .say('<p>Post number five. ' + latestHNews.newsItems[8] + '.</p>')
       .send();
       return true;
     });
